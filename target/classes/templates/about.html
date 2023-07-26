@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title>About Me</title>
+<link rel="icon" href="css/favicon (2).ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap"
+	rel="stylesheet">
+<link rel='stylesheet'
+	href='https://fonts.googleapis.com/css?family=Ubuntu' type='text/css'>
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- Font Awesomes -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	charset="utf-8"></script>
+</head>
+
+<body style="background-color: #f0f1f2">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">DashBoard</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/about"><i
+						class="fa fa-regular fa-user"></i> About </a></li>
+				<li class="nav-item"><a class="nav-link" href="/storeTemp"><i
+						class="fa fa-solid fa-temperature-empty"></i> Temperature</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa fa-light fa-atom"></i> Device Details
+				</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="/deviceDetails">Add
+								Device</a></li>
+						<li><a class="dropdown-item" href="/showDevice">Show
+								Device</a></li>
+						<li><a class="dropdown-item" href="/delete">Delete Device</a></li>
+
+					</ul></li>
+
+			</ul>
+		</div>
+	</nav>
+	<div class="card container-fluid"
+		style="width: 50%; text-align: justify; background-color: #f0f1f2; margin-top: 1%;">
+		<div class="card-body">
+			<h1 class="card-title">Motor Thermal Analysis Tool</h1>
+			<p class="card-content">Motor Thermal Analysis Tool is a
+				cutting-edge project designed to revolutionize the way device
+				temperature data is collected, stored, and visualized. Our advanced
+				platform empowers users to effortlessly track and monitor
+				temperature conditions of various devices, providing valuable
+				insights into their performance and overall health. With Motor
+				Thermal Analysis Tool, you can easily store and manage temperature
+				data from different devices, associating each entry with its
+				corresponding device name. Our intuitive interface allows users to
+				seamlessly navigate through the collected data and visualize it in
+				comprehensive graphs, enabling quick identification of patterns,
+				trends, and anomalies.</p>
+		</div>
+	</div>
+</body>
+<div class="bottom-container">
+	<a class="footer-link"
+		href="https://www.linkedin.com/in/sameer-nayak-429348230">LinkedIn</a>
+	<a class="footer-link"
+		href="https://twitter.com/kumarsameer2002?t=RFotCfr2C_KmGeyOtGa9Zg&amp;s=08">Twitter</a>
+	<a class="footer-link" href="https://sameer075.github.io/Resume/">Website</a>
+	<p class="copyright-msg" id="copyright">© sameer kumar .</p>
+</div>
+<script>
+  // Get the current year
+  var currentYear = new Date().getFullYear();
+
+  // Find the element by its ID
+  var copyrightElement = document.getElementById("copyright");
+
+  // Update the content with the current year
+  copyrightElement.innerText = "© " +currentYear + " Sameer Nayak.";
+</script>
+</html>

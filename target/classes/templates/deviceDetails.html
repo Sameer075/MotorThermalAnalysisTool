@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Data Entry Form</title>
+<link rel="icon" href="css/favicon (2).ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap"
+	rel="stylesheet">
+<link rel='stylesheet'
+	href='https://fonts.googleapis.com/css?family=Ubuntu' type='text/css'>
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- Font Awesomes -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+	charset="utf-8"></script>
+
+</head>
+<body style="background-color: #f0f1f2">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">DashBoard</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/about"><i class="fa fa-regular fa-user"></i> About
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="/storeTemp"><i
+						class="fa fa-solid fa-temperature-empty"></i> Temperature</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+						class="fa fa-light fa-atom"></i> Device Details </a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						<li><a class="dropdown-item" href="/deviceDetails">Add
+								Device</a></li>
+						<li><a class="dropdown-item" href="/showDevice">Show
+								Device</a></li>
+						<li><a class="dropdown-item" href="/delete">Delete Device</a></li>
+
+					</ul></li>
+
+			</ul>
+		</div>
+	</nav>
+	<div class="main">
+
+		<h1 class="heading">Data Entry Form</h1>
+		
+
+		<!-- Alert Message -->
+		<!--   <div th:if="${session.message}"
+    th:classappend="${session.message}" class="alert alert-success"
+    role="alert">
+    <p th:text="${session.message}"></p>
+    <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+    </div> -->
+
+
+		<form id="f" th:action="@{/device}" method="post"
+			onsubmit="submitForm();">
+			<div class="mb-3">
+				<label for="name">Device Name:</label><br> <select
+					class="form-select" id="deviceType" name="deviceType"
+					aria-label="Default select example" required>
+					<option selected value="">Select Device Type</option>
+					<option value="M1TR">M1TR</option>
+					<option value="M1TY">M1TY</option>
+					<option value="M1TB">M1TB</option>
+					<option value="M2TR">M2TR</option>
+					<option value="M2TY">M2TY</option>
+					<option value="M2TB">M2TB</option>
+					<option value="M3TR">M3TR</option>
+					<option value="M3TY">M3TY</option>
+					<option value="M3TB">M3TB</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="name">Device Type:</label><br> <select
+					class="form-select" id="deviceDiscr" name="deviceDiscr"
+					aria-label="Default select example" required>
+					<option selected value="">Select Device Name</option>
+					<option value="Motor1TempR">Motor1TempR</option>
+					<option value="Motor1TempY">Motor1TempY</option>
+					<option value="Motor1TempB">Motor1TempB</option>
+					<option value="Motor2TempR">Motor2TempR</option>
+					<option value="Motor2TempY">Motor2TempY</option>
+					<option value="Motor2TempB">Motor2TempB</option>
+					<option value="Motor3TempR">Motor3TempR</option>
+					<option value="Motor3TempY">Motor3TempY</option>
+					<option value="Motor3TempB">Motor3TempB</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<label for="name">Device Temperature:</label> <input type="number"
+					id="temp" name="temp" class="form-control"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default">
+
+			</div>
+			<button type="submit" class="btn btn-primary btn-lg"
+				onclick="myFunction()">
+				<i class="fa fa-regular fa-paper-plane"></i> Submit
+			</button>
+			<div class="mb-3 link">
+				<a href="/storeTemp">store temperature?</a>
+			</div>
+			
+		</form>
+	</div>
+	
+		<button id="logout" type="submit" class="btn btn-dark btn-lg"
+				onclick="logout()">
+				<i class="fa fa-solid fa-sign-out"></i>Logout
+			</button>
+
+
+	<script src="js/index.js" charset="utf-8"></script>
+</body>
+
+</html>

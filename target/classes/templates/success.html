@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>success</title>
+</head>
+<body>
+<!-- <p th:text="${deviceInfo}"></p> -->
+
+<!-- 	<table>
+	<tr th:each="devices:${deviceInfo}">
+	<td th:text="${devices.deviceType}"></td>
+	<td th:text="${devices.deviceDiscr}"></td>
+	<td th:text="${devices.threshold[0].temp}"></td>
+	</tr>
+	</table> -->
+	 <canvas id="graph-canvas" style="width:50%;height:50%;"></canvas>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script th:inline="javascript">
+	var deviceInfo=/*[[${deviceInfo}]]*/ null;
+	</script> 
+	<script th:src="@{js/chart1.js}" charset="utf-8"></script> 
+</body>
+
+</html>
